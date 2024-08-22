@@ -1,0 +1,57 @@
+.TH PyCom_v1.5.2 1 "August 2024" "Version 1.5.2" "Serial Port Reader"
+
+.SH NAME
+PyCom_v1.5.1 \- A Python-based serial port reader with optional GUI.
+
+.SH SYNOPSIS
+.B PyCom_v1.5.1
+[\-\-gui] [\-\-port \fIPORT\fR] [\-\-baud \fIBAUDRATE\fR]
+
+.SH DESCRIPTION
+.B PyCom_v1.5.1
+is a tool for reading data from serial ports. The program can operate either in command-line mode or with a graphical user interface (GUI). It supports specifying the serial port and baud rate, and exporting data to a file is only available in GUI mode.
+
+By default, the script runs in command-line mode. If the \fB\-\-gui\fR option is provided, the script launches a GUI for interactive use.
+
+.SH OPTIONS
+.TP
+.BR \-\-gui
+Launches the program with a graphical user interface (GUI). In this mode, users can select the serial port and baud rate from dropdown menus, view real-time data in a scrollable text area, and start/stop the serial communication interactively. The GUI also includes a button to export the displayed data to a text file.
+
+.TP
+.BR \-\-port \ \fIPORT\fR
+Specifies the serial port to connect to (e.g., /dev/ttyACM0, COM3). This option is required when the script is run in command-line mode.
+
+.TP
+.BR \-\-baud \ \fIBAUDRATE\fR
+Specifies the baud rate for the serial connection (e.g., 9600, 115200). This option is required when the script is run in command-line mode.
+
+.TP
+.BR \>\> <Destination File>
+You can export the readings throw this into an file(.txt).
+
+.SH EXAMPLES
+Run the script with a GUI:
+.RS 4
+.B python3 PyCom_v1.5.1.py \-\-gui
+.RE
+
+Run the script in command-line mode with a specified port and baud rate:
+.RS 4
+.B python3 PyCom_v1.5.1.py \-\-port /dev/ttyACM0 \-\-baud 9600
+.RE
+
+.SH EXIT STATUS
+.B PyCom_v1.5.1
+returns 0 on successful completion, and >0 if an error occurs.
+
+.SH AUTHOR
+Developed by ChatGPT, based on user requirements.
+
+.SH SEE ALSO
+python(1), pyserial(1)
+
+.SH BUGS
+No known bugs. Report any issues to the developer.
+
+
